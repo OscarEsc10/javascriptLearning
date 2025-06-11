@@ -7,6 +7,7 @@ function updateClock() {
   let seconds = now.getSeconds(); // Gets the current seconds (0–59)
   let ampm = hours >= 12 ? 'PM' : 'AM'; // Determines if it's AM or PM
 
+  // format of ternary operator: Condition ? value_if_is_true : Value_if_is_false;
   // Ensures each value has two digits by adding a leading zero if needed
   hours = hours < 10 ? '0' + hours : hours;
   minutes = minutes < 10 ? '0' + minutes : minutes;
