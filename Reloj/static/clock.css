@@ -1,0 +1,50 @@
+body {
+  background-color: #111;
+  color: #EBEBE3;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  animation: blink 2s ease-in-out;
+}
+
+
+@keyframes blink {
+  0%{
+    opacity: 0;
+  }
+
+  50% {
+        transform: translateY(-10px);
+        opacity: 0.5;
+    }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+#clock {
+  font-size: 4rem;
+  padding: 20px 40px;
+  border: 3px solid #EBEBE3;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #EBEBE3;
+}
+
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  #clock {
+    font-size: 2.5rem;
+    padding: 10px 20px;
+    border-width: 2px;
+  }
+}
