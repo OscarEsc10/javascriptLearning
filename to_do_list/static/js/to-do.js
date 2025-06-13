@@ -1,55 +1,41 @@
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
+function addtask() {
+  // Get the input element where the user types the task
+  const input = document.getElementById("taskInput");
+
+  // Get the trimmed text value (removing leading/trailing spaces)
+  const text = input.value.trim();
+
+  // If the input is empty, do nothing
+  if (text === "") return;
+
+  // Get the list container where tasks will be displayed
+  const list = document.getElementById("addtask");
+
+  // Create a new <li> element for the task
+  const li = document.createElement("li");
+
+  // Set the task text as the content of the <li>
+  li.textContent = text;
+
+  // Add event listener to toggle the 'completed' style on click
+  li.addEventListener("click", () => {
+    li.classList.toggle("completed");
+  });
+
+  // Create a button to delete the task
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "✖";
+  deleteBtn.onclick = (e) => {
+    e.stopPropagation();
+    li.remove();
+  };
+
+  // Append the delete button to the <li>
+  li.appendChild(deleteBtn);
+
+  // Add the task <li> to the task list
+  list.appendChild(li);
+
+  // Clear the input field after adding the task
+  input.value = "";
 }
-
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-} 
