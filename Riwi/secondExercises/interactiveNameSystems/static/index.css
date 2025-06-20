@@ -1,0 +1,52 @@
+/* Set base styles for the entire page */
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: cursive; /* Use a cursive font for the text */
+    background-color: #F2EBE3; /* Set a soft beige background color */
+    display: flex; /* Use Flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    margin-top: 5%; /* Add spacing at the top */
+    animation: 1s ease-in-out fadeIn; /* Apply fade-in animation on load */
+}
+
+/* Define the fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(0); /* Start at initial vertical position */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+        transform: translateY(-18px, 0); /* Move slightly upward (note: this line contains a syntax error, explained below) */
+    }
+}
+
+/* Style for the form element */
+form {
+    display: flex; /* Use Flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally within the form */
+    margin-left: 20px; /* Add spacing to the left */
+}
+
+/* Style for button-like elements with class "button" */
+.button {
+    background-color: #F2EBE3; /* Match the background to the page */
+    border: 2px solid #000; /* Solid black border */
+    color: #000; /* Black text */
+    padding: 10px 20px; /* Add padding around the text */
+    text-align: center; /* Center the text inside the button */
+    text-decoration: none; /* Remove underline if it's a link */
+    display: inline-block; /* Keep the button in-line but allow padding */
+    font-size: 16px; /* Set font size */
+    margin: 4px 2px; /* Small margin around the button */
+    cursor: pointer; /* Show pointer cursor on hover */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+/* Style for the element with ID "message" */
+#message {
+    margin-top: 40px; /* Space above the message */
+    margin-left: 20pzx; /* Space to the left of the message */
+}
