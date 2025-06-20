@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Set language to Spanish -->
+  <head>
+    <meta charset="UTF-8" /> <!-- Define character encoding -->
+    <title>Validate age</title> <!-- Page title shown in browser tab -->
+    
+    <!-- Link external CSS file for styles -->
+    <link rel="stylesheet" href="./static/index.css">
+  </head>
+
+  <body>
+    <!-- Page heading -->
+    <h2>Welcome</h2>
+
+    <!-- User input form -->
+    <form id="form">
+      <!-- Name input -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" required /> <!-- "required" ensures the field must be filled -->
+      <br /><br />
+
+      <!-- Age input -->
+      <label for="age">Age:</label>
+      <input type="text" id="age" required />
+      <br /><br />
+
+      <!-- Submit button with class for styling -->
+      <button type="submit" class="button">Send</button>
+    </form>
+
+    <!-- Element to display the validation message -->
+    <p id="message"></p>
+
+    <!-- Include external JavaScript file (deferred to run after HTML is loaded) -->
+    <script src="./static/js/dynamic.js" defer></script>
+  </body>
+</html>
