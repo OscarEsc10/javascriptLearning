@@ -1,8 +1,10 @@
 // Load environment variables from the .env file into process.env
-require('dotenv').config();
+// i can use the import because i have set the type in package.json to module
+
+import 'dotenv/config';
 
 // Import the MongoClient class from the mongodb library
-const { MongoClient } = require('mongodb');
+import { MongoClient } from 'mongodb';
 
 // Get the connection string (URI) from the environment variables
 const uri = process.env.MONGO_URI;
