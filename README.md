@@ -12,7 +12,10 @@ JavaScriptLearning/
 ├── Counter/          # Simple counter using setInterval
 ├── Crud/             # MongoDB connection using Node.js and express
 ├── Fibonacci/        # Fibonacci sequence displayed with HTML, css and JS
-├── Riwi/             # Directory for save the javascript process
+├── Riwi/             # Directory for save the javascript process, This directory have the week exercise 
+    ├── firstExercises/      # Exercises did it by my own
+    ├── secondExercises/     # This directory save the exercises approach by the Tl
+        ├── interactiveNameSystems/     # Exercise M2S1
 ├── to_do_list/       # Dynamic to-do list
 ├── index.js          # General test file (Node.js)
 ├── .env              # Environment variables (ignored by Git)
