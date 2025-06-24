@@ -2,13 +2,20 @@
 // i can use the import because i have set the type in package.json to module
 import 'dotenv/config';
 
-import hollywoodStars from './routes/hollywoodStars.js'; // Import the router for Hollywood stars
+// Import the router for Hollywood stars
+import hollywoodStars from './routes/hollywoodStars.js'; 
 
 // Import the Express framework
 import express from 'express';
 
+import bodyparser from 'body-parser'; // Import body-parser middleware for parsing request bodies
+
 // Create an instance of the Express application
 const app = express(); 
+
+app.use(express.json()); // Middleware to parse JSON request bodies
+app.use(bodyparser.json()); // Middleware to parse JSON request bodies
+app.use(bodyparser.urlencoded({ extended: true })); // Middleware to parse URL-encoded request
 
 app.use('/hollywoodStars', hollywoodStars); // Use the stars router for handling requests to /stars
 

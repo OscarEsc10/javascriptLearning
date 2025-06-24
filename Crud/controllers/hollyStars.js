@@ -1,3 +1,5 @@
+import StarsModel from '../models/starsModel.js'; // Import the star model
+
 // Controller class for managing star-related operations
 class StarControllers {
     constructor(){
@@ -7,10 +9,8 @@ class StarControllers {
     // Create a new star
     async create(req, res) {
         try {
-            const { name, description } = req.body; // Extract star data from request body
-            // Save the new star to the database (method assumed to exist)
-            const newStar = await this.saveStar({ name, description });
-            res.status(201).json(newStar); // Respond with the created star
+            const star = await StarsModel.create(req.body); // Call the create method from the star model
+            res.status(201).json(star); // Respond with the created star
         } catch (error) {
             res.status(500).json({ message: 'Error creating star', error }); // Handle errors
         }

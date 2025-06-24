@@ -2,9 +2,8 @@
 // i can use the import because i have set the type in package.json to module
 
 import 'dotenv/config';
+import { MongoClient, ObjectId } from 'mongodb';
 
-// Import the MongoClient class from the mongodb library
-import { MongoClient } from 'mongodb';
 
 // Get the connection string (URI) from the environment variables
 const uri = process.env.MONGO_URI;
@@ -27,6 +26,9 @@ async function run() {
 
     // Retrieve all documents from the collection and convert them to an array
     const documents = await collection.find().toArray();
+
+    // Filter by one ID to retrieve a specific document
+    // const documents = await collection.findOne({_id: new ObjectId ('68573b8e8f32431dd976427e')});
 
     // Print the documents to the console
     console.log(documents);
