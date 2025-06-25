@@ -1,8 +1,9 @@
 // Load environment variables from the .env file into process.env
-require('dotenv').config();
+// i can use the import because i have set the type in package.json to module
 
-// Import the MongoClient class from the mongodb library
-const { MongoClient } = require('mongodb');
+import 'dotenv/config';
+import { MongoClient, ObjectId } from 'mongodb';
+
 
 // Get the connection string (URI) from the environment variables
 const uri = process.env.MONGO_URI;
@@ -24,7 +25,10 @@ async function run() {
     const collection = db.collection('javascript');
 
     // Retrieve all documents from the collection and convert them to an array
-    const documents = await collection.find().toArray();
+    // const documents = await collection.find().toArray();
+
+    // Filter by one ID to retrieve a specific document
+    const documents = await collection.findOne({_id: new ObjectId ('6856fc5e8f32431dd976427c')});
 
     // Print the documents to the console
     console.log(documents);
