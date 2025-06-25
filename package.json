@@ -1,31 +1,10 @@
 {
-  "name": "javascriptlearning",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "i will been uploading some javascript stuff",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OscarEsc10/javascriptLearning.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/OscarEsc10/javascriptLearning/issues"
-  },
-  "homepage": "https://github.com/OscarEsc10/javascriptLearning#readme",
   "dependencies": {
-    "cors": "^2.8.5",
     "dotenv": "^16.5.0",
-    "expres": "^0.0.5",
     "express": "^5.1.0",
+    "json-server": "^1.0.0-beta.3",
     "mongodb": "^6.17.0",
-    "node": "^24.2.0",
-    "prompt-sync": "^4.2.0",
-    "require": "^2.4.20"
+    "node": "^20.19.3",
+    "type": "module"
   }
 }
