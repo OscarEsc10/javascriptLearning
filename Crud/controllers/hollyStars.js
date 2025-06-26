@@ -1,4 +1,5 @@
 // Import the star model for database operations
+import starsModel from '../models/starsModel.js';
 import StarsModel from '../models/starsModel.js'; 
 
 // Controller class for managing star-related operations
@@ -96,5 +97,11 @@ class StarControllers {
     }
 }
 
+
+// show all users
+export const index = async (req, res) => {
+  const stars = await starModel.findAll();
+  res.render('stars/index', { stars });
+};
 // Export an instance of the StarControllers class
 export default new StarControllers();

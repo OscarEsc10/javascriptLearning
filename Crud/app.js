@@ -5,15 +5,24 @@ import 'dotenv/config';
 // Import the router for Hollywood stars
 import hollywoodStars from './routes/hollywoodStars.js'; 
 
+import { fileURLToPath } from 'url';
+
 // Import the Express framework
 import express from 'express';
 
 import bodyparser from 'body-parser'; // Import body-parser middleware for parsing request bodies
+import path from 'path';
 
 // Create an instance of the Express application
 const app = express(); 
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.set('view engine', 'ejs'); // Set EJS as the view engine for rendering templates
+app.set('views', path.join(__dirname, 'views')); // Set the directory for EJS templates
 app.use(express.json()); // Middleware to parse JSON request bodies
+app.use(express.urlencoded({ extended: true })); // Middleware to parse URL-encoded request bodies
 app.use(bodyparser.json()); // Middleware to parse JSON request bodies
 app.use(bodyparser.urlencoded({ extended: true })); // Middleware to parse URL-encoded request
 
