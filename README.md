@@ -1,24 +1,80 @@
-# JavaScriptLearning 📚
+# JAVASCRIPTLEARNING
 
-This repository aims to document and share various exercises and practical projects I'm developing using **JavaScript**, both in the browser (frontend) and with Node.js (backend).
+This repository contains exercises organized into folders, covering various JavaScript topics—from validations to data structures.
 
 ---
 
-## 📁 Project Structure
+## Prerequisites
 
-```plaintext
-JavaScriptLearning/
-├── Clock/            # Digital clock using JavaScript and DOM
-├── Counter/          # Simple counter using setInterval
-├── Crud/             # MongoDB connection using Node.js and express
-├── Fibonacci/        # Fibonacci sequence displayed with HTML, css and JS
-├── Riwi/             # Directory for save the javascript process, This directory have the week exercise 
-    ├── firstExercises/      # Exercises did it by my own
-    ├── secondExercises/     # This directory save the exercises approach by the Tl
-        ├── interactiveNameSystems/     # Exercise M2S1
-├── to_do_list/       # Dynamic to-do list
-├── index.js          # General test file (Node.js)
-├── .env              # Environment variables (ignored by Git)
-├── .gitignore        # Files/directories ignored by Git
-├── package.json      # Node.js configuration
-├── README.md         # Project description (this file)
+- [Node.js](https://nodejs.org/) installed (version 14+ recommended)
+- Use an editor like [Visual Studio Code](https://code.visualstudio.com/)# JAVASCRIPTLEARNING
+
+This repository contains exercises organized into folders, covering various JavaScript topics—from validations to data structures.
+
+---
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) installed (version 14+ recommended)
+- Use an editor like [Visual Studio Code](https://code.visualstudio.com/)
+- Optional: install useful extensions like “Code Runner” or run via terminal using `node`
+
+---
+
+## Project Structure
+
+```bash
+JAVASCRIPTLEARNING/
+│
+├── ageValidate/           # Age validation exercises
+├── Clock/                 # Clock logic
+├── Counter/               # Counter logic
+├── Crud/                  # Basic CRUD operations
+├── Fibonacci/             # Fibonacci series
+├── node_modules/          # Dependencies (created with npm install)
+├── Riwi/
+│   ├── firstExercises/    # Basic starter exercises
+│   ├── secondExercises/   # Additional exercises
+│   └── M3W2/              # Module 3, Week 2 tasks
+│       ├── management_data.js
+│       ├── scheduleConflicts.js
+│       ├── tree.js
+│       └── leapOfFolder.txt
+│
+├── To_do.list             # Task list
+├── .gitignore
+├── LICENSE
+├── package-lock.json
+├── package.json
+└── README.md
+
+- Optional: install useful extensions like “Code Runner” or run via terminal using `node`
+
+---
+
+## Project Structure
+
+```bash
+JAVASCRIPTLEARNING/
+│
+├── ageValidate/           # Age validation exercises
+├── Clock/                 # Clock logic
+├── Counter/               # Counter logic
+├── Crud/                  # Basic CRUD operations
+├── Fibonacci/             # Fibonacci series
+├── node_modules/          # Dependencies (created with npm install)
+├── Riwi/
+│   ├── firstExercises/    # Basic starter exercises
+│   ├── secondExercises/   # Additional exercises
+│   └── M3W2/              # Module 3, Week 2 tasks
+│       ├── management_data.js
+│       ├── scheduleConflicts.js
+│       ├── tree.js
+│       └── leapOfFolder.txt
+│
+├── To_do.list             # Task list
+├── .gitignore
+├── LICENSE
+├── package-lock.json
+├── package.json
+└── README.md
